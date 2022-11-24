@@ -19,7 +19,14 @@ function App() {
   }
 
   function handleChange(e) {
-    setCalories(e.target.value);
+    getMealData(e.target.value);
+  }
+
+  //NOTe When user press ENTER key to get daily meal plan
+  function handleKeyDown(e) {
+    if (e.key === 'Enter') {
+      setCalories(e.target.value);
+    }
   }
 
   return (
@@ -30,7 +37,9 @@ function App() {
           placeholder="Calories (e.g. 200)"
           onChange={handleChange}
         />
-        <button onClick={getMealData}>Get Daily Meal Plan</button>
+        <button onClick={getMealData} onKeyDown={handleKeyDown}>
+          Get Daily Meal Plan
+        </button>
       </section>
       {mealData && <MealList mealData={mealData} />}
     </div>
