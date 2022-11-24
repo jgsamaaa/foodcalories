@@ -3,16 +3,15 @@ import MealList from './MealList';
 
 function App() {
   const [mealData, setMealData] = useState(null);
-  const [calories, setCalories] = useState(2000);
+  const [calories, setCalories] = useState(200);
 
   function getMealData() {
     fetch(
-      `https://api.spoonacular.com/mealplanner/generate?apiKey=2bd207f7572842b3bb082bba4fdd1714&timeFrame=day&targetCalories=${calories}`
+      `https://api.spoonacular.com/mealplanner/generate?apiKey=7b3d631a95e7447a8e6c5ea30fab2470&timeFrame=day&targetCalories=${calories}`
     )
       .then((response) => response.json())
       .then((data) => {
         setMealData(data);
-        console.log(data);
       })
       .catch(() => {
         console.log('error');
@@ -28,7 +27,7 @@ function App() {
       <section className="controls">
         <input
           type="number"
-          placeholder="Calories (e.g. 2000)"
+          placeholder="Calories (e.g. 200)"
           onChange={handleChange}
         />
         <button onClick={getMealData}>Get Daily Meal Plan</button>
