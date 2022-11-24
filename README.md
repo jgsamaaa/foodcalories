@@ -4,7 +4,7 @@ Daily Meal Planner.
 
 Put how many calories you want for the day and it will give you 3 meals base on the calories you put in.
 
-Live Server: https://gabrieltattoo.netlify.app/
+Live Server: https://gabrieldailymealplanner.netlify.app/
 
 ## Main Page
 
