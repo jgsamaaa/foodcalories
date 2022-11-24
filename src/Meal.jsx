@@ -24,9 +24,14 @@ export default function Meal({ meal }) {
       <ul className="instructions">
         <li>Preparation time: {meal.readyInMinutes} minutes</li>
         <li>Number of servings: {meal.servings}</li>
+        <li>Calories: {meal.calories}</li>
       </ul>
 
-      <a href={meal.sourceUrl}>Go to Recipe</a>
+      <div className="recipeButton">
+        <a href={meal.sourceUrl} target="_blank" rel="noopener noreferrer">
+          Go to Recipe
+        </a>
+      </div>
     </article>
   );
 }
