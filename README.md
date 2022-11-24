@@ -1,4 +1,4 @@
-# Project Title
+# Daily Calorie Meal Planner
 
 Daily Meal Planner.
 
